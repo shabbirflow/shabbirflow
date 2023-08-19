@@ -1,5 +1,5 @@
 <h1 align="center">Hey 👋, I'm Shabbir Kaderi</h1>
-<h3 align="center">I am an engineering undergrad and an aspiring software engineer. I love programming, music & going on hikes.</h3>
+<h3 align="center">I'm an engineering undergrad and an aspiring software engineer. I love programming, music & going on hikes.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shabbirflow&label=Profile%20views&color=0e75b6&style=flat" alt="shabbirflow" /> </p>
 
