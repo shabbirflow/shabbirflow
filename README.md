@@ -5,7 +5,7 @@
 
 - 📫 How to reach me **kaderishabbir@gmail.com**
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/1JbufA_f7oNPkULp3PXisLUwTRV9uWLcR/view?usp=sharing](https://drive.google.com/file/d/1JbufA_f7oNPkULp3PXisLUwTRV9uWLcR/view?usp=sharing)
+- 📄 Know about my experiences [https://drive.google.com/file/d/1JbufA_f7oNPkULp3PXisLUwTRV9uWLcR/view?usp=sharing](https://drive.google.com/file/d/10dh-wcjLgqgvE8UbOo32Af046M3vFN51/view?usp=sharing)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
