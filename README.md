@@ -1,5 +1,5 @@
 <h1 align="center">Hey There. I'm Shabbir Kaderi</h1>
-<h3 align="center">Software engineer skilled in DSA, front-end development, and DevOps. Committed to creating stunning web presences, problem- solving, and optimizing workflows for seamless user experiences.</h3>
+<h3 align="center">Software engineer skilled in DSA, front-end development, and DevOps. Committed to creating stunning web presences, problem-solving, and optimizing workflows for seamless user experiences.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shabbirflow&label=Profile%20views&color=0e75b6&style=flat" alt="shabbirflow" /> </p>
 
