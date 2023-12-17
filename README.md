@@ -1,11 +1,13 @@
 <h1 align="center">Hey There. I'm Shabbir Kaderi</h1>
-<h3 align="center">I'm an engineering undergrad and an aspiring software engineer. I love programming, music & going on hikes.</h3>
+<h3 align="center">Software engineer skilled in DSA, front-end development, and DevOps. Committed to creating stunning web presences, problem- solving, and optimizing workflows for seamless user experiences.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shabbirflow&label=Profile%20views&color=0e75b6&style=flat" alt="shabbirflow" /> </p>
 
 - 📫 How to reach me **kaderishabbir@gmail.com**
 
 - 📄 Know about my experiences [https://drive.google.com/drive/folders/1TUOf5S2SefMvBxPV2rKieBegMnaTGJCL?usp=sharing](https://drive.google.com/drive/folders/1TUOf5S2SefMvBxPV2rKieBegMnaTGJCL?usp=sharing)
+
+- - 💼 Portfolio **https://portfolio-beach-shabbir.vercel.app/**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
