@@ -1,24 +1,22 @@
 import React, { useCallback, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 import {  Redirect } from "react-router";
 // import app from "../../base.js";
 import { AuthContext } from "../../Auth";
 import Alert from "react-bootstrap/Alert";
-import "./LoginForm.css";
-import { getAuth, signInWithEmailAndPassword  } from "firebase/auth";
-
+import "../Login/LoginForm.css";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 import {
   Button,
-  Form,
   FormGroup,
   Label,
   Input,
-  Card,
   CardImg,
 } from "reactstrap";
 
-function LoginForm() {
+function SignupForm() {
   const [displayError, setDisplayError] = useState();
   const navigate = useHistory();
   const [email, setEmail] = useState("");
@@ -26,24 +24,30 @@ function LoginForm() {
 
   const handleFormSubmitted = useCallback(async (event) => {
     event.preventDefault();
+    console.log(email, password);
     try {
+      // await app
+      //   .auth()
+      //   .createUserWithEmailAndPassword(email.value, password.value);
       const auth = getAuth();
-      signInWithEmailAndPassword(auth, email, password).then(
+      createUserWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
           console.log("SIGNED IN", userCredential.user);
           // ...
-        })
-    }catch (error) {
-      setDisplayError("Wrong password or email");
+        }
+      );
+      navigate.push("/");
+    } catch (error) {
+      setDisplayError(JSON.stringify(error["message"]));
     }
-  }, []);
+  });
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
     return <Redirect to="/" />;
   }
-  const navigateToSignup = () => {
-    navigate.push("/signup");
+  const navigateToLogin = () => {
+    navigate.push("/login");
   };
 
   return (
@@ -55,19 +59,22 @@ function LoginForm() {
               style={{ textAlign: "center" }}
               className="col left-background "
             >
-              <img className="brandLogo" src={require("../NavBar/brand.jpg")} />
+              <img className="brandLogo" src={require("../NavBar/brand.jpg")} alt="logo" />
               <h2>GenZ DriveInsights</h2>
+             
+               
+            
               <p>Everything Records here!</p>
               <CardImg
                 style={{ borderRadius: "20px" }}
                 className="mobile-img"
-                src="https://i.ibb.co/2F11P8p/oie-QTu-Sjd-DFTel-W.jpg"
+                src="https://static1.squarespace.com/static/56537f8fe4b0eb26e63322da/5653811be4b0d39ff6a85677/606799625899b6066d7926bf/1636411670241/How-can-i-secretly-track-my-car-by-car-audio-city-san-diego.jpg?format=1500w"
                 alt="mobile-App"
               />
             </div>
             <div className="col login-form">
               <form onSubmit={handleFormSubmitted}>
-                <h2 className="font-weight-bold mb-4">Login</h2>
+                <h2 className="font-weight-bold mb-4">Create an account</h2>
                 <FormGroup>
                   <Label className="font-weight-bold mb-2">Email</Label>
                   <Input
@@ -88,11 +95,11 @@ function LoginForm() {
                     onChange={(event) => setPassword(event.target.value)}
                   />
                 </FormGroup>
-                <Button className="mt-3  btn">Login</Button>
+                <Button className="mt-3  btn">Sign up</Button>
 
                 <div style={{ textAlign: "center", marginTop: "2vh" }}>
-                  <a className="mt-3 " href="#" onClick={navigateToSignup}>
-                    Create an account
+                  <a className="mt-3 " href="#" onClick={navigateToLogin}>
+                    Already have an account
                   </a>
                 </div>
 
@@ -108,4 +115,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default SignupForm;

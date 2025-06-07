@@ -9,6 +9,8 @@ import NavBar from "./components/NavBar/NavBar";
 const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const API_ENDPOINT_VID = "https://2860-2401-4900-8fc9-20e8-f160-3374-efad-4faa.ngrok-free.app";
+  const [videoId, setVideoId] = useState();
   function convertToIST(utcTime) {
     const date = new Date(utcTime);
     const istTime = new Date(date.getTime() + 5.5 * 60 * 60 * 1000);
@@ -40,8 +42,34 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const getId = async () => {
+      try {
+        const res = await axios.get(`${API_ENDPOINT_VID}/getid`, {
+          headers: {
+            "ngrok-skip-browser-warning": "any-value"
+          }
+        });
+        // Assuming your API returns a list of video IDs
+        // setVideoIds(res.data); 
+        console.log("Video IDs", res.data);
+        setVideoId(res.data.id);
+      } catch (error) {
+        console.error("Error fetching video IDs", error);
+      }
+    };
+    getId();
+  }, []);
+
   if (loading) {
     return <p>Loading...</p>;
+  }
+
+  const getId = async () => {
+    const res = await axios.get(
+      API_ENDPOINT_VID + "/getId"
+    );
+    console.log("RES", res);  
   }
 
   return (
@@ -64,6 +92,9 @@ const Home = () => {
               <th style={{ textAlign: "center" }} className="tableTh">
                 Relative Speed
               </th>
+              <th style={{ textAlign: "center" }} className="tableTh">
+                Video Feed
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -83,6 +114,16 @@ const Home = () => {
 
                 <td className="tableTd">{item.field3}</td>
                 <td className="tableTd">{item.field4}</td>
+                <td className="tableTd">
+                  {/* {getId()} */}
+                  <a
+                    href={`https://pub-99108591c26945f880c380bf32c43a20.r2.dev/videodata/${videoId}/footage.mp4`}
+                    target="_blank" rel="noreferrer"
+                  >
+                    Video
+                  </a>
+                  <br />
+                  </td>
               </tr>
             ))}
           </tbody>

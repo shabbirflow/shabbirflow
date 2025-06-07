@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 // import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import app from "./base";
 
 export const AuthContext = React.createContext();
 
@@ -26,7 +27,8 @@ export const AuthProvider = ({ children }) => {
     // }
 
     try {
-      const auth = getAuth();
+      const auth = getAuth(app);
+      console.log(auth);
       onAuthStateChanged(auth, (user) => {
         // if (user) {
           console.log(user);
@@ -60,6 +62,7 @@ export const AuthProvider = ({ children }) => {
       </>
     );
   }
+  console.log("AUTH REACHED");
 
   return (
     <AuthContext.Provider

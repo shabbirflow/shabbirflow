@@ -18,9 +18,6 @@ input {
   margin-bottom: 10px;
   font-size: 1rem;
 }
-.image {
-  /* background-image: url("https://hips.hearstapps.com/hmg-prod/images/gettyimages-1214430325.jpg?crop=1.00xw:0.779xh;0,0.221xh&resize=1200:*"); */
-}
 .login-box {
   display: flex;
   justify-content: center;
