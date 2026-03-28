@@ -7,7 +7,7 @@
 
 - 📄 Know about my experiences: [https://drive.google.com/drive/folders/1TUOf5S2SefMvBxPV2rKieBegMnaTGJCL?usp=sharing](https://drive.google.com/drive/folders/1TUOf5S2SefMvBxPV2rKieBegMnaTGJCL?usp=sharing)
 
-- 💼 Portfolio: **https://shabbir-kaderi.vercel.app/**
+- 💼 Portfolio: **[https://shabbir.quest/](https://www.shabbir.quest/)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
